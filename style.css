@@ -1,0 +1,160 @@
+body {
+    font-family: 'Gill Sans', Calibri, sans-serif;
+    background-color: lightpink;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background-color: white;
+    padding: 15px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.sidebar li {
+    background-color: #ffd1e1;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background-color: hotpink;
+    color: white;
+}
+
+.sidebar li.active {
+    background-color: hotpink;
+    color: white;
+}
+
+#addFolderBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: palevioletred;
+    color: mistyrose;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#addFolderBtn:hover {
+    background-color: hotpink;
+}
+
+/* MAIN CONTAINER */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: palevioletred;
+    color: mistyrose;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hotpink;
+}
+
+/* SEARCH */
+.search-box {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #ffe4ec;
+}
+
+/* PASSWORD LIST */
+.password-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.password-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.actions button:hover {
+    color: hotpink;
+}
+
+.actions .delete {
+    color: red;
+}
+
+.actions .delete:hover {
+    color: darkred;
+}
+
+
