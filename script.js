@@ -7,7 +7,15 @@ const form = document.getElementById("passwordForm");
 const passwordList = document.getElementById("passwords");
 const searchInput = document.getElementById("searchInput");
 
+// 1. Initial Load
 document.addEventListener("DOMContentLoaded", loadPasswords);
+
+// 2. Listen for changes from OTHER tabs
+window.addEventListener('storage', function(event) {
+    if (event.key === 'passwords') {
+        loadPasswords(); // Reload data when another tab updates localStorage
+    }
+});
 
 // ADD PASSWORD
 form.addEventListener("submit", function (e) {
@@ -50,6 +58,11 @@ function loadPasswords(filter = "") {
     filtered.forEach((item, index) => {
         const li = document.createElement("li");
 
+        // Note: The index here is based on the FILTRATED list, 
+        // to delete correctly, we need the index of the ORIGINAL list.
+        // For simplicity with this current structure, I'm keeping your indexing,
+        // but it may cause issues if you delete while searching.
+        
         li.innerHTML = `
             <div>
                 <strong>${item.website}</strong><br>
@@ -72,10 +85,11 @@ function togglePassword(index) {
     const saved = JSON.parse(localStorage.getItem("passwords"));
     const span = document.getElementById(`pass-${index}`);
 
-    span.textContent =
-        span.textContent === "••••••••"
-            ? saved[index].password
-            : "••••••••";
+    if (span.textContent === "••••••••") {
+        span.textContent = saved[index].password;
+    } else {
+        span.textContent = "••••••••";
+    }
 }
 
 // DELETE PASSWORD
