@@ -1,4 +1,6 @@
+// Remove ?website=... from URL so saved passwords always load
 history.replaceState(null, "", "index.html");
+
 let selectedFolder = "All";
 
 const form = document.getElementById("passwordForm");
@@ -111,4 +113,3 @@ function createFolder() {
     li.onclick = () => selectFolder(name);
     folderList.appendChild(li);
 }
-
