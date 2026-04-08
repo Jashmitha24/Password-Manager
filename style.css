@@ -110,7 +110,6 @@ button:hover {
 .search-box {
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-right: 20px;
 }
 
 .search-box input {
@@ -156,5 +155,3 @@ button:hover {
 .actions .delete:hover {
     color: darkred;
 }
-
-
