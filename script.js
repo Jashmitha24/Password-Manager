@@ -1,3 +1,4 @@
+history.replaceState(null, "", "index.html");
 let selectedFolder = "All";
 
 const form = document.getElementById("passwordForm");
